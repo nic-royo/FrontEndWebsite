@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!--This html element defines the whole language of the HTML document-->
+<html lang="en">
+<!--The head part of the document details the necessary stylesheets, bootstrap, and Javascript we will be referencing. The meta section will display general information of the website, having device width here will allow the page to refit depending on the size of the screen, it doesnt have a fixed attribute.-->
+<head>
+  <title>Nicolas Obregon Home/Index Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--The link element as said previously will link to external resources such as bootstrap or CSS stylesheets-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!--The script element will summon JavaScript elements-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Initialize Header, here we will have a clickable naviagtion bar with dropdown lists. Two of the parts of the website wont have dropdown as they dont have as many elements in the webpage -->
+    <div class="container divHeader">
+        <h1>Burning Newsletter - Home</h1>
+        <nav class="navbar navbar-default ">
+            <div class="container">
+                <div class="navbar-header">
+
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+<!--sr-only is used for screen readers, therefore making it accesible for other instances, similarly, aria-haspopu will tell people with vision impairment that there is a dropdown menu-->
+                        <span class="sr-only">Toggle navigation</span>
+<!--The icon bar will make the menu openable if we make the screen smaller-->
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+<!--The navbar-brand method from bootstrap takes us to the index homepage when we click on the image. The collapse method will make the navbar collapse-->
+                    <a class="navbar-brand" href="index.html">
+                        <img class="imgLogo" alt="Burning" src="img/logo.jpg">
+                    </a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+<!--The caret class will create a arrow down icon. We will also include the id of each page, so when we click on it it can possibly take us to the specific point we want it to.-->
+                            <a href="index.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="index.html">Main Page</a></li>
+                                <li><a href="index.html#latest_news">Latest News</a></li>
+                                <li><a href="index.html#general_touring">General Touring</a></li>
+                                <li><a href="index.html#best_tracks">Best Tracks</a></li>                                
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="about.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About the Band<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="about.html#members">Members</a></li>
+                                <li><a href="about.html#story">Story</a></li>
+                            </ul>
+                        </li>                        
+                        <li><a href="discography.html">Discography</a></li>
+                        <li class="dropdown">
+                            <a href="touring.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Touring Information<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="touring.html">General Info</a></li>
+                                <li><a href="touring.html#past_tours">Past Tours</a></li>
+                                <li><a href="touring.html#tours2020">Tours 2020</a></li>
+                                <li><a href="touring.html#tours2021">Tours 2021</a></li> 
+                            </ul>
+                        </li>
+                        <li><a href="useful-links.html">Useful Links</a></li>
+                        
+                    </ul>
+                    
+                </div><!--/.nav keep in mind will collapse here-->
+            </div>
+        </nav>
+    </div>
+    <!-- Finish Header -->
+    
+    <div class="container">
+        <a class="anchor" id="latest_news"></a>
+        <h3 class="text-center pageTitle">Latest News</h3>
+        <div class="row">
+            <div class="col-md-8">
+                <h4>About the Website</h4>  
+                <p>Welcome to the Burning Band unofficial newsletter. My name is Nicolas Obregon and as a student of UOL, I have decided that for this project I would make a newsletter for a band from hy hometown, Bogota. This band has existed for quite some time, but only until recently have I learned about it, and as a fan of Latin American Death Metal, I thought it would be fun to make this little project. Naturally, some concepts will be not real and will not reflect the band in reality.</p>
+                <br>
+                <h4>New Album Announced 2021</h4>
+                <p>Burning has announced in their website that a new album is currently in production, and will be released in early 2021. The unfortunate situation the world is in right now has given our beloved band members the opportunity to dedicate vast amounts of time into creating a new album. Not a lot of information about the album has been revealed now except for the expected date of release. One thing is for sure however, it will be &#128293 INFERNAL! &#128293</p>
+            </div>
+<!--The previous code will make some fire images appear next to the word INFERNAL.-->
+            <div class="col-md-4">
+                <img src="img/home/banda13.jpg" alt="Band Playing" class="pageImg">
+            </div>
+        </div>
+
+        <br>
+        
+        <a class="anchor" id="general_touring"></a>
+        <h3 class="text-center pageTitle">General Touring Information</h3>
+        <div class="row">            
+            <div class="col-md-4">
+                <img src="img/home/banda17.jpg" alt="Burning Members" class="pageImg">
+            </div>
+            <div class="col-md-8">
+                <h4>Information about Covid-19</h4>
+                <p>Due to the ongoing pandemic. It is unfortunate for us to announce that all remaining concerts for 2020 have been canceled. However, this has only allowed the band to dedicate time to bringing us a whole new album straight from the depths of hell. Stay tuned for more information!</p>
+                <br>
+                <h4>2021 Tour Announced</h4>
+                <p>Considering Burning is recording a new album, they have released a whole new set of touring dates for the latter half of 2021. As they are expecting for the situation to be more calm by the time that comes, surely concert halls and metal bars will already be open. If we stay home and take care of ourselves, the sooner we can go back to having a beer with our friends and sacrificing goats under the moonlight.</p>
+            </div>
+        </div>
+        <br>
+<!--In here, I will make it possible to access a youtube video from within the website with the video-responsive method. Fullscreen is allowed as seen with the methods following it. The col-md-# method will easily allow us to get columns to fit when changing the size of the screen, furhter adding to our acccesibility-->
+        <h3 class="text-center">Intro to Buring</h3>
+        <a class="anchor" id="best_tracks"></a>
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 ">
+                <div class="video-responsive div-chat" id="divVideo">
+                    <iframe  src="https://www.youtube.com/embed/M7c1fyLf1qE?disablekb=0&iv_load_policy=3&rel=0&showinfo=0&controls=1&autoplay=0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> </iframe>
+                </div>                    
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+          <span>This website is only done as a fun project for my Web Development Module. While the band does indeed exist, it shouldnt be considered in any way as an official site.</span>
+        </div>
+      </footer>
+    <!-- Footer -->
+
+
+
+
+</body>
+</html>

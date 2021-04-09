@@ -1,0 +1,155 @@
+/*With root we can declare global variables for the carrousel.*/
+:root {
+	--red: #E50914;
+	--fondo: #141414;
+}
+
+.container {
+	width: 90%;
+	margin: auto;
+}
+/*With this, I can change if the link style changes once I click on it, or move my mouse through it*/
+a:link, a:visited, a:active {
+  text-decoration:none;
+}
+
+
+/* Head Container and Controls, display flex will make it a container, and the justify-content will make sure the albums are spread out evenly, with the same space in between. With align-items, if an album is out of frame, it will disappear, instead of appeating below the others, as if it were just pushed.  */
+.container-title-controls {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+}
+
+
+.container-title-controls .indicators button {
+	background: #fff;
+	height: 3px;
+	width: 10px;
+	cursor: pointer;
+	border: none;
+	margin-right: 2px;
+}
+
+.container-title-controls .indicators button:hover,
+.container-title-controls .indicators button.activo {
+	background: red;
+}
+
+
+/* ---- ----- ----- Main Container and Arrows ----- ----- ----- */
+.musical-discs {
+	margin-bottom: 70px;
+}
+
+.musical-discs .container-principal {
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+/*The top: calc(50% - 25%); will amke sure that the element is position 25% from its predecessor.*/
+.musical-discs .container-principal .arrow-left,
+.musical-discs .container-principal .arrow-right {
+	position: absolute;
+	border: none;
+	background: rgba(0,0,0,0.3);
+	font-size: 40px;
+	height: 50%;
+	top: calc(50% - 25%);
+	line-height: 40px;
+	width: 50px;
+	color: #fff;
+	cursor: pointer;
+	z-index: 500;
+	transition: .2s ease all;
+}
+
+.musical-discs .container-principal .arrow-left:hover,
+.musical-discs .container-principal .arrow-right:hover {
+	background: rgba(0,0,0, .9);
+}
+
+.musical-discs .container-principal .arrow-left {
+	left: 0;
+}
+
+.musical-discs .container-principal .arrow-right {
+	right: 0;
+}
+
+/* Code for the Carousel. Overflow hidden means that it is clipped. The scroll behavior will ensure the images smooth to the sides instead of the albums just jumping in between each other  */
+.musical-discs .container-carousel {
+	width: 100%;
+	padding: 80px 0;
+	overflow: hidden;
+	scroll-behavior: smooth;
+}
+
+/*Again, nowrap in the flex-wrap will ensure the images of the albums dont go below or above when they are moved to the right or left*/
+.musical-discs .container-carousel .carousel {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.disc{
+	min-width: 30%;
+	transition: .3s ease all;
+  box-shadow: 5px 5px 10px rgba(0,0,0, .3);
+  max-height: 250px;
+  margin-left: 20px;
+  margin-right: 20px;
+
+}
+
+/*Here, the scale in transform will make sure the images become bigger when we hover over them*/
+.disc.hover {
+	transform: scale(1.2);
+  transform-origin: center;
+  text-decoration: none;
+}
+
+/*Here we will affect how the disk images look, we will use object-fir to prevent them from having strange wide shapes*/
+.disc img {
+	width: 100%;
+  vertical-align: top;
+  border-style: solid;
+  border-width: 1px;
+  border-color: red;
+  height: 100%;
+  object-fit: contain 
+}
+
+/*This will be for the title of the discs*/
+.discTitle {
+  font-size: 30px;
+  color: red;
+  font-weight: 900;
+}
+
+/*Media Queries*/
+@media screen and (max-width: 800px) {
+	
+	header .container {
+		flex-direction: column;
+		text-align: center;
+	}
+
+
+	.musical-discs .container-carousel {
+		overflow: visible;
+	}
+    
+/*The gap element is used to increase or decrease the gap between items, I will use it for the same*/
+	.musical-discs .container-carousel .carousel {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 20px;
+	}
+
+	.musical-discs .indicators,
+	.musical-discs .arrow-left,
+	.musical-discs .arrow-right {
+		display: none;
+	}
+}

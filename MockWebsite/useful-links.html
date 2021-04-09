@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<!--This html element defines the whole language of the HTML document-->
+<html lang="en">
+<!--The head part of the document details the necessary stylesheets, bootstrap, and Javascript we will be referencing. The meta section will display general information of the website, having device width here will allow the page to refit depending on the size of the screen, it doesnt have a fixed attribute.-->
+<head>
+  <title>Nicolas Obregon Useful Links Section</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--The link element as said previously will link to external resources such as bootstrap or CSS stylesheets-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!--The script element will summon JavaScript elements-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Initialize Header, here we will have a clickable naviagtion bar with dropdown lists. Two of the parts of the website wont have dropdown as they dont have as many elements in the webpage -->
+    <div class="container divHeader">
+        <h1>Burning Newsletter - Useful Links</h1>
+        <nav class="navbar navbar-default ">
+            <div class="container">
+                <div class="navbar-header">
+
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+<!--sr-only is used for screen readers, therefore making it accesible for other instances, similarly, aria-haspopu will tell people with vision impairment that there is a dropdown menu-->
+                        <span class="sr-only">Toggle navigation</span>
+<!--The icon bar will make the menu openable if we make the screen smaller-->
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+<!--The navbar-brand method from bootstrap takes us to the index homepage when we click on the image-->
+                    <a class="navbar-brand" href="index.html">
+                        <img class="imgLogo" alt="Burning" src="img/logo.jpg">
+                    </a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+<!--The caret class will create a arrow down icon. We will also include the id of each page, so when we click on it it can possibly take us to the specific point we want it to.-->
+                            <a href="index.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                               <li><a href="index.html">Main Page</a></li>
+                                <li><a href="index.html#latest_news">Latest News</a></li>
+                                <li><a href="index.html#general_touring">General Touring</a></li>
+                                <li><a href="index.html#best_tracks">Best Tracks</a></li>                                
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="about.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About the Band<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="about.html#members">Members</a></li>
+                                <li><a href="about.html#story">Story</a></li>
+                            </ul>
+                        </li>                        
+                        <li><a href="discography.html">Discography</a></li>
+                        <li class="dropdown">
+                            <a href="touring.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Touring Information<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="touring.html">General Info</a></li>
+                                <li><a href="touring.html#past_tours">Past Tours</a></li>
+                                <li><a href="touring.html#tours2020">Tours 2020</a></li>
+                                <li><a href="touring.html#tours2021">Tours 2021</a></li> 
+                            </ul>
+                        </li>
+                        <li><a href="useful-links.html">Useful Links</a></li>
+                        
+                    </ul>
+                    
+                </div><!--/.nav keep in mind will collapse here-->
+            </div>
+        </nav>
+    </div>
+    <!-- Finish Header -->
+    
+    
+<!--This part will show us the image that is clickable in the webpage. The CSS will make sure that the images pop up when we hover over them, we'll be using the bootstrap method of col-md-2 text-center to make sure the icons are perfectly aligned in the webpage and are not un-harmonious. We will make them all belong to a container. I had to add an extra col-md-2 method in the begining for it to align in the middle instead of in the left side. By having target="_BLANK" we make sure that link is opened in another tab, instead of the same webpage. The images all have alt as an alternate text, making it more accesible or visually impaired people.-->
+    <div class="container">
+        <h3 class="text-center pageTitle">Useful Links</h3>
+        <br><br>
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-2 text-center">
+                <a href="https://open.spotify.com/artist/3nVhZdZ2oRe0gwSWppAES3?si=Me0swtIxSdGK7psmjdU-MA" target="_BLANK">
+                    <img src="img/links/spotify.png" class="pageImg iconSocial" alt="Burning Spotify Link">
+                </a>
+            </div>
+
+            <div class="col-md-2 text-center">
+                <a href="https://www.youtube.com/channel/UCTDP84Ebc4m5aSaAYHQ8ctg/featured" target="_BLANK">
+                    <img src="img/links/yt_logo.jpg" class="pageImg iconSocial" alt="Burning Youtube Link">
+                </a>
+                
+            </div>
+            <div class="col-md-2 text-center">
+                <a href="https://www.facebook.com/BRNGColombianThrashSpeedMetal" target="_BLANK">
+                    <img src="img/links/fb_logo.png" class="pageImg iconSocial" alt="Burning Facebook Link">
+                </a>
+                
+            </div>
+            <div class="col-md-2 text-center">
+                <a href="https://burningcolombianme.wixsite.com/misitio" target="_BLANK">
+                    <img src="img/links/burninglogo.jpg" class="pageImg iconSocial" alt="Burning Official Website">
+                </a>
+                
+            </div>
+           
+        </div>
+
+        <br>
+
+
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+          <span>This website is only done as a fun project for my Web Development Module. While the band does indeed exist, it shouldnt be considered in any way as an official site.</span>
+        </div>
+    </footer>
+    <!-- Footer -->
+
+
+
+
+
+</body>
+</html>

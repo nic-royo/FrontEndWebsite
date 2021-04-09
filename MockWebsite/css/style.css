@@ -1,0 +1,106 @@
+/*webkit, moz and o allow us to use the website in Safari, Firefox and Opera. */
+body{    
+    color: gray!important;
+    background: url('../img/fondo.png') no-repeat fixed;    
+    background-color: black;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    padding: 0;
+    margin: 0;    
+    -webkit-font-smoothing: antialiased;
+    text-shadow: 0 0 3px #FF0000;
+    
+
+}
+
+/*well add a specific font for the headers*/
+@font-face{
+    font-family: m_font;
+    src: url(metalfont.ttf);
+}
+
+.divHeader{
+    margin-bottom: 50px;
+    font-family: m_font;
+}
+
+
+.imgLogo{
+    max-height: 100%;
+}
+
+
+.navbar-brand {    
+    padding: 5px 5px;    
+}
+
+.pageImg{
+    max-width: 100%;
+}
+
+.pageTitle{
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.aboutParagraph{
+    font-size:23px;
+}
+
+.iconSocial{
+    max-height: 90px;
+    max-width: 140px;
+}
+
+/*This here will make the icons in the Useful Links section to scale to a bigger version when we hover over them*/
+.iconSocial:hover {
+	transform: scale(1.5);
+    transform-origin: center;
+    text-decoration: none;
+}
+
+.liOpcion{
+    font-size: 20px;
+}
+
+.video-responsive {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    position: relative;
+}
+.video-responsive iframe, .video-responsive object, .video-responsive embed {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+/*I will set a hierarchy here, so each method will look up to its parent*/
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    width: 70%;
+    margin: auto;
+    object-fit: contain;
+}
+
+
+.footer {
+    position: static;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: red;
+    color:white !important;
+    margin-top:30px;
+}
+
+.footer > .container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+

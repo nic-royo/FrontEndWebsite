@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--This html element defines the whole language of the HTML document-->
+<html lang="en">
+<!--The head part of the document details the necessary stylesheets, bootstrap, and Javascript we will be referencing. The meta section will display general information of the website, having device width here will allow the page to refit depending on the size of the screen, it doesnt have a fixed attribute.-->
+<head>
+  <title>Discography Section</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--The link element as said previously will link to external resources such as bootstrap or CSS stylesheets-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!--The script element will summon JavaScript elements-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/carrusel.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+ <!-- Initialize Header, here we will have a clickable naviagtion bar with dropdown lists. Two of the parts of the website wont have dropdown as they dont have as many elements in the webpage -->
+    <div class="container divHeader">
+        <h1>Burning Newsletter - Discography</h1>
+        <nav class="navbar navbar-default ">
+            <div class="container">
+                <div class="navbar-header">
+
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+<!--sr-only is used for screen readers, therefore making it accesible for other instances, similarly, aria-haspopu will tell people with vision impairment that there is a dropdown menu-->
+                        <span class="sr-only">Toggle navigation</span>
+<!--The icon bar will make the menu openable if we make the screen smaller-->
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+<!--The navbar-brand method from bootstrap takes us to the index homepage when we click on the image-->
+                    <a class="navbar-brand" href="index.html">
+                        <img class="imgLogo" alt="Burning" src="img/logo.jpg">
+                    </a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="dropdown">
+<!--The caret class will create a arrow down icon. We will also include the id of each page, so when we click on it it can possibly take us to the specific point we want it to.-->
+                            <a href="index.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="index.html">Main Page</a></li>
+                                <li><a href="index.html#latest_news">Latest News</a></li>
+                                <li><a href="index.html#general_touring">General Touring</a></li>
+                                <li><a href="index.html#best_tracks">Best Tracks</a></li>                                
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="about.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About the Band<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="about.html#members">Members</a></li>
+                                <li><a href="about.html#story">Story</a></li>
+                            </ul>
+                        </li>                        
+                        <li><a href="discography.html">Discography</a></li>
+                        <li class="dropdown">
+                            <a href="touring.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Touring Information<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="touring.html">General Info</a></li>
+                                <li><a href="touring.html#past_tours">Past Tours</a></li>
+                                <li><a href="touring.html#tours2020">Tours 2020</a></li>
+                                <li><a href="touring.html#tours2021">Tours 2021</a></li> 
+                            </ul>
+                        </li>
+                        <li><a href="useful-links.html">Useful Links</a></li>
+                        
+                    </ul>
+                    
+                </div><!--/Keep in mind.nav-collapse will occur here-->
+            </div>
+        </nav>
+    </div>
+    <!-- Finish Header -->
+
+    
+    <div class="musical-discs container">
+        <div class="container-title-controls">
+            <h3 class="text-center pageTitle">Discography</h3>
+            <div class="indicators"></div>
+        </div>
+
+        <div class="container-principal">
+<!--THis will create the arrows on the left side, the fas fa-angle-left is the icon representing a left arrow-->
+            <button role="button" id="arrow-left" class="arrow-left"><i class="fas fa-angle-left"></i></button>
+
+            <div class="container-carousel">
+                <div class="carousel">
+                    <div class="disc">
+<!--Again we have the target _BLANK which will take us to a new tab when clicked instead of opening the link in the same tab-->
+                        <a href="https://www.metal-archives.com/albums/Burning/Burning_in_Hell/280923" target="_BLANK">
+                            <img src="img/discography/2010.jpg" alt="">
+                            <p class="discTitle text-center"> Burning In Hell (2010) </p>
+                        </a>
+                    </div>
+                    <div class="disc">
+                        <a href="https://www.metal-archives.com/albums/Burning/Infernal_Steel/311048" target="_BLANK">
+                            <img src="img/discography/2011.jpg" alt="">
+                            <p class="discTitle text-center"> Infernal Steel (2011) </p>
+                        </a>
+                    </div>
+                    <div class="disc">
+                        <a href="https://www.metal-archives.com/albums/Burning/Blasphemy/548107" target="_BLANK">
+                            <img src="img/discography/2015.jpg" alt="">
+                            <p class="discTitle text-center"> Blasphemy (2015) </p>
+                        </a>
+                    </div>
+                    <div class="disc">
+                        <a href="https://www.metal-archives.com/albums/Burning/Chains%2C_Leather_and_Hell/654869" target="_BLANK">
+                            <img src="img/discography/2017.jpg" alt="">
+                            <p class="discTitle text-center"> Chains, Leather and Hell (2017)</p>
+                        </a>
+                    </div>
+                    <div class="disc">
+                        <a href="https://www.metal-archives.com/albums/Burning/Victims_of_Fear/852019" target="_BLANK">
+                            <img src="img/discography/2019.jpg" alt="">
+                            <p class="discTitle text-center"> Victims of Fear (2019) </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+<!--This will create the arrows on the right side, the fas fa-angle-right is the icon representing a right arrow-->
+            <button role="button" id="arrow-right" class="arrow-right"><i class="fas fa-angle-right"></i></button>
+        </div>
+    </div>
+  
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+          <span>This website is only done as a fun project for my Web Development Module. While the band does indeed exist, it shouldnt be considered in any way as an official site.</span>
+        </div>
+      </footer>
+    <!-- Footer -->
+
+
+<!--REFERENCES!. Here I am summoning the js file I made, as well as the source for the kit, which is the arrow icon.-->
+<script src="js/carrusel.js"></script>
+<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
